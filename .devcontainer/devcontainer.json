@@ -1,6 +1,8 @@
 {
 	"name": "PHP in Docker",
-	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+	"build": {
+        "dockerfile": "Dockerfile"
+    },
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
 			"version": "latest",
