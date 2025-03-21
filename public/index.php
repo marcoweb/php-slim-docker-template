@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link href="/css/default.css" rel="stylesheet" />
-    <title>Document</title>
-</head>
-<body>
-    <h1>PHP & Mysql</h1>
-</body>
-</html>
+<?php
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Slim\Factory\AppFactory;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$app = AppFactory::create();
+
+$app->get('/', function (Request $request, Response $response, $args) {
+    $response->getBody()->write("Hello world!");
+    return $response;
+});
+
+$app->run();
