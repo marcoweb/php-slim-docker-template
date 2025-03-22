@@ -41,12 +41,11 @@ return [
             // of valid parameters: https://www.doctrine-project.org/projects/doctrine-dbal/en/current/reference/configuration.html
             'connection' => [
                 'driver' => 'pdo_mysql',
-                'host' => 'localhost',
+                'host' => '172.18.0.3',
                 'port' => 3306,
                 'dbname' => 'application',
                 'user' => 'root',
-                'password' => 'rootpass',
-                'charset' => 'utf-8'
+                'password' => 'rootpass'
             ]
         ]
     ]
